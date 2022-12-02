@@ -1,0 +1,1869 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TestStories.API</name>
+    </assembly>
+    <members>
+        <member name="M:TestStories.API.Controllers.AwsController.LogError(TestStories.API.Models.RequestModels.LogErrorExceptionModel)">
+            <summary>
+            Api to log errors at AWS
+            </summary>
+            <param name="_model"></param>
+            <returns>OK Response</returns>
+        </member>
+        <member name="T:TestStories.API.Controllers.CallbackController">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.CallbackController.ProcessAll(TestStories.Common.EntityType)">
+            <summary>
+             Action to trigger lambda function to generate resized images for old original images
+            </summary>
+        </member>
+        <member name="M:TestStories.API.Controllers.CommonController.Lookup(TestStories.API.Models.ResponseModels.LookupType)">
+            <summary>
+             Api to get master data like SeriesType, Tags, Source etc, 
+             Used At: Admin and End-User.
+            </summary>
+            <param name="lookupType">
+            </param>
+            <returns>An object that contains the master data</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.CommonController.MigrateSrtFiles(System.Collections.Generic.List{TestStories.API.Models.RequestModels.AddSrtFileModel})">
+            <summary>
+             Api to migrate SrtFiles to MediaSrt table, 
+             Used At: Admin.
+            </summary>
+            <returns>Ok Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.CommonController.GenerateSeoFriendlyUrl(System.Boolean)">
+            <summary>
+             Api to genearte SEO friendly urls, 
+             Used At: Admin. 
+            </summary>
+            <returns> OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.CommonController.ContactUsMail(TestStories.API.Models.RequestModels.ContactUsMailModel)">
+            <summary>
+             Api to send the Contact Us mail to user, 
+             Used At: End-User.
+            </summary>
+            <returns>OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.CommonController.BecomeAPartnerMail(TestStories.API.Models.RequestModels.BecomeAPartnerMailModel)">
+            <summary>
+             Api to send Become A Partner mail, 
+             Used At: End-User.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.CommonController.SubscribeNewsletter(TestStories.API.Models.RequestModels.SubscribeNewletterModel)">
+            <summary>
+             Api to Subscribe Newsletter,
+             Used At: End-User.
+            </summary>
+            <param name="entity"></param>
+            <returns>An object that contains the user details</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.EditorPicksController.#ctor(TestStories.API.Services.IEditorPickWriteService,TestStories.API.Services.IUserReadService,Microsoft.Extensions.Logging.ILogger{TestStories.API.Controllers.EditorPicksController},TestStories.API.Services.IEditorPickReadService)">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.EditorPicksController.GetEditorPicksAsync(System.Int32)">
+            <summary>
+             Api to get Editor Picks details, 
+             Used At: Admin.
+            </summary>
+            <param name="id">
+            id of the Editor Pick
+            </param>
+            <returns>OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.EditorPicksController.SaveEditorPicksAsync(TestStories.API.Models.RequestModels.EditorPicksModel)">
+            <summary>
+             Api to add Editor Picks, 
+             Used At: Admin.
+            </summary>
+            <param name="model"></param>
+            <returns> An object that contains the details of newly added Editor Pick</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.EditorPicksController.EditEditorPicksAsync(System.Int32,TestStories.API.Models.RequestModels.EditorPicksModel)">
+            <summary>
+             Api to edit Editor Pick, 
+             Used At: Admin.
+            </summary>
+            <param name="id">
+            id of the Editor Pick
+            </param>
+            <param name="model"></param>
+            <returns>An object that contains the updated details of Editor Pick</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.EditorPicksController.RemoveEditorPicksAsync(System.Int32)">
+            <summary>
+             Api to remove Editor Pick, 
+             Used At: Admin.
+            </summary>
+            <param name="id">
+            id of the Editor Pick
+            </param>
+            <returns> OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ExperimentController.#ctor(TestStories.API.Services.IExperimentWriteService,TestStories.API.Services.IExperimentReadService,TestStories.API.Services.IUserReadService,Microsoft.Extensions.Logging.ILogger{TestStories.API.Controllers.ExperimentController})">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.ExperimentController.FilterExperimentAsync(TestStories.API.Models.RequestModels.ExperimentFilterRequest)">
+            <summary>
+             Api to get Experiments with filter, 
+             Used At: Admin.
+            </summary>
+            <returns>An object that contains the filtered Experiements</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ExperimentController.ExperiementAutoCompleteAsync">
+            <summary>
+             Api to get Experiments for autocomplete dropdown, 
+             Used At: Admin
+            </summary>
+            <returns>An object that contains the all Experiments</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ExperimentController.GetExperiementAsync(System.Int32)">
+            <summary>
+              Api to get Experiment entity, 
+              Used At: Admin.
+            </summary>
+            <param name="id">
+            id of the Experiment.
+            </param>
+            <returns>Ab object that contains the Experiment details.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ExperimentController.AddExperimentAsync(TestStories.API.Models.RequestModels.AddExperimentModel)">
+            <summary>
+            Api to add new Experiment, 
+            Used At: Admin.
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the newly added Experiement.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ExperimentController.EditExperimentAsync(System.Int32,TestStories.API.Models.RequestModels.EditExperimentModel)">
+            <summary>
+             Api to edit Experiment,  
+             Used At: Admin.
+            </summary>
+            <returns>An object that contains the updated experiement details</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ExperimentController.UpdateExperimentStatus(TestStories.API.Models.RequestModels.UpdateExperimentModel)">
+            <summary>
+            Api to update Experiment Status, 
+            Used At: Admin.
+            </summary>
+            <param name="model"></param>
+            <returns>OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ExperimentController.TrackEvent(TestStories.API.Models.RequestModels.TrackEventRequest)">
+            <summary>
+            Api to track Experiment Event, 
+            Used At: Admin and End-User. 
+            </summary>
+            <param name="model"></param>
+            <returns>OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.#ctor(TestStories.API.Services.IMediaWriteService,TestStories.API.Services.IMediaReadService,TestStories.API.Services.IUserReadService,Microsoft.Extensions.Logging.ILogger{TestStories.API.Controllers.MediaController})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="repo"></param>
+            <param name="mediaReadService"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.MediaSearch(TestStories.API.Models.RequestModels.FilterMediaRequest)">
+            <summary>
+             Api to get Medias based on filter criteria, 
+             Used At :Admin.
+            </summary>
+            <param name="request"></param>
+            <returns>An object that contains the collection of filtered media.</returns>
+                   
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.GetMediaAsync(System.Int32)">
+            <summary>
+            Retrieves Media entity by id. 
+            Used At: Admin and End-User.
+            </summary>
+            <param name="id"></param>
+            <returns>An object that contains the details of media entity</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.GetMediaByIdAsync(System.Int32)">
+            <summary>
+            Retrieves Media details by id. 
+            Used At: End-User.
+            </summary>
+            <param name="id"></param>
+            <returns>An object that contains the details of media entity</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.MediaAutoCompleteSearch">
+            <summary>
+             Api to get collection of Medias for Dropdown, 
+             Used At: Admin.
+            </summary>
+            <returns>An object that contains the collection of media entities</returns>
+            
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.GetMediaShortInfoAsync">
+            <summary>
+              Api to get short details of Media entities, 
+              Used At: Admin and End-User.
+            </summary>
+            <returns>An object that contains the collection of short media entities</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.GetMediaCarouselInfoAsync(TestStories.API.Models.RequestModels.IdsRequest{System.Int64})">
+            <summary>
+              Api to get Media Carousel info, 
+              Used At: End-User.
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the collection of Carousel Media</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.ArchiveMedia(System.Int32)">
+            <summary>
+             Api to Archive media based on mediaId, 
+             Used At: Admin.
+            </summary>
+            <param name="mediaId"></param>
+            <returns>An object that contains the Base Response.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.UnarchiveMedia(System.Int32)">
+            <summary>
+               Api to UnArchive Media based on MediaId, 
+               Used At: Admin.
+            </summary>
+            <param name="mediaId"></param>
+            <returns>An object that contains the Base Response.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.AddMediaAsync(TestStories.API.Models.RequestModels.AddMediaModel)">
+            <summary>
+            Api to add a Media entity, 
+            Used At: Admin.
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the newly added media detail</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.EditMediaAsync(TestStories.API.Models.RequestModels.EditMediaModel)">
+            <summary>
+            Api to edit the Media entity, 
+            Used At: Admin.
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the updated media details.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.UpdateAllMediaOnCloud">
+            <summary>
+              Api to update all Medias at Cloud, 
+              Used At: Admin.
+            </summary>
+            <returns> Ok Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.SendToPartnerAsync(TestStories.API.Models.RequestModels.AddSendToPartnerModel)">
+            <summary>
+            Api to attach Media to specific Partner, 
+            Used At: Admin.
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the details of attached media to partner. </returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.MediaPlayList(System.Int32)">
+            <summary>
+               Api to get Media playlist by PlaylistId, 
+               Used At: End-User.
+            </summary>
+            <param name="playlistId"></param>
+            <returns>An object that contains the collection of playlist medias</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.FilteredMedia(TestStories.API.Models.RequestModels.FilterMediaSearchRequest)">
+            <summary>
+             Api to get filtered media by media type and status, 
+             Used At: Admin.
+            </summary>
+            <returns>An object that contains the collection of filtered media.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.GenerateHlsUrl">
+            <summary>
+              Api to generate HLS URL, 
+              Used At: Admin.
+            </summary>
+            <returns> Ok Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.DeleteMediaByTypeAsync(System.String)">
+            <summary>
+            Removes Media entity by title. 
+            Used At: Admin.
+            </summary>
+            <param name="title"></param>
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.GenerateNewSeoUrl">
+            <summary>
+              Api to get generated New Seourl, 
+              Used At: Admin.
+            </summary>
+            <returns> An object that contains the collection of media SeoUrl details</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.GetUpdatedSeoUrl">
+            <summary>
+              Api to get updated Seourl, 
+              Used At: Admin.
+            </summary>
+            <returns>  An object that contains the collection of updated media SeoUrl details</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.UpdateMediaSeoUrl">
+            <summary>
+              Api to Update SeoUrls for media, 
+              Used At: Admin.
+            </summary>
+            <returns> Ok Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.RemoveMediaAsync(System.Int64)">
+            <summary>
+            Api to soft delete the Media entity, 
+            Used At: SuperAdmin.
+            </summary>
+            <param name="id"></param>
+            <returns>OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.MediaController.UpdateMediaUniqueIds(System.String)">
+            <summary>
+             Api to update media uniqueIds, 
+             Used At: Admin, SuperAdmin. 
+            </summary>
+            <returns> OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.PartnerController.GetPartnerAsync(System.Int32)">
+            <summary>
+             Api to get Partner by parnerId, 
+             Used At: Admin.
+            </summary>
+            <param name="id"></param>
+            <returns>An object that contains the Partner Details.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.PartnerController.UnarchivePartner(System.Int32)">
+            <summary>
+             Api to Unarchive Existing Partner, 
+             Used At: Admin.
+            </summary>
+            <param name="id"></param>
+            <returns>OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.PartnerController.AddPartner(TestStories.API.Models.ResponseModels.AddPartnerViewModel)">
+            <summary>
+            Api to add new Partner, 
+            Used At: Admin.
+            </summary>
+            <returns>An object that contains the added Partner details.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.PartnerController.EditPartner(System.Int32,TestStories.API.Models.ResponseModels.EditPartnerViewModel)">
+            <summary>
+            Api to edit Partner,  
+            Used At: Admin.
+            </summary>
+            <returns>An object that contains the updated partner details </returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.PartnerController.SearchPartner(TestStories.API.Models.RequestModels.FilterPartnerViewRequest)">
+            <summary>
+             Api to get filtered Partners, 
+             Used At: Admin.
+            </summary>
+            <returns>An object that contains the collection of filtered partners.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.PartnerController.SearchPartnersAutoComplete">
+            <summary>
+            Api to get collection of Partners for dropdown, 
+            Used At: Admin.
+            </summary>
+            <returns>An ojject that contains the colection of short details of partners.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.PartnerController.getPartnerDetails(System.Nullable{System.Int32},System.Int32,System.Int32)">
+            <summary>
+            Api to get partners, 
+            Used At: Admin.
+            </summary>
+            <param name="id"></param>
+            <param name="page"></param>
+            <param name="pageSize"></param>
+            <returns>An object that contains the collection of partners.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.PartnerController.getShowcasePartners">
+            <summary>
+             Api to get showcase Partners, 
+             Used At:Admin.
+            </summary>
+            <returns>An object that contains the collection of showcase partners.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.PartnerController.GetActivePartnersAsync">
+            <summary>
+             Api to get Active Partners, 
+             Used At:Admin.
+            </summary>
+            <returns>An object that contains the collection of Active partners.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.PartnerController.GetDistributionMedia(System.Int64,System.Int32)">
+            <summary>
+              Api to validate Partner distribution Media,
+              Used At: Admin.
+            </summary>
+            <param name="partnerId"></param>
+            <param name="mediaId"></param>
+            <returns>OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.PartnerController.GetPartnerMedia(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Api to get Content-Partner Medias, 
+            Used At: Admin.
+            </summary>
+            <param name="id"></param>
+            <param name="PageSize"></param>
+            <param name="Page"></param>
+            <returns>An object that contains the details of content-partner with medias count.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.PartnerController.GetPartnerDestribution(TestStories.API.Models.ResponseModels.FilterPartnerDistributionViewRequest)">
+            <summary>
+            Api to get details of Partners Distribution, 
+            Used At: Admin.
+            </summary>
+            <param name="_filter"></param>
+            <returns>An object that contains the partners distribution media.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.PartnerController.DistributionMediaAutoCompleteSearch">
+            <summary>
+             Api to get Distribution-Media for dropdown, 
+             Used At: Admin.
+            </summary>
+            <returns>An object that contains the collection of distribution media.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.PartnerController.DistributionMediaSearch(TestStories.API.Models.ResponseModels.FilterPartnerDistributionViewRequest)">
+            <summary>
+            Api to get filtered distribution media, 
+            Used At: Admin.
+            </summary>
+            <param name="_filter"></param>
+            <returns>An object that contains the filtered distribution media.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.PartnerController.RemovePartnersAsync(System.Int32)">
+            <summary>
+             Api to delete the Partner, 
+             Used At: Admin.
+            </summary>
+            <param name="id"></param>
+            <returns>OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.PartnerController.ArchivePartnerAsync(System.Int32)">
+            <summary>
+             Api to rrchive existing Partner, 
+             Used At: Admin.
+            </summary>
+            <param name="id"></param>
+            <returns>OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.PartnerController.ExpirePartnerDistribution(System.Collections.Generic.List{System.Int32})">
+            <summary>
+             Api to expire Partner distribution Medias, 
+             Used At: Admin.
+            </summary>
+            <param name="ids"></param>
+            <returns>OK response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.PartnerController.UpdateEndDateOfPartnerDistribution(System.Int32,System.String)">
+            <summary>
+             Api to update enddate of Partner distribution, 
+             Used At: Admin.
+            </summary>
+            <param name="id"></param>
+            <param name="endDate"></param>
+            <returns>OK response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.PartnerController.GetPartnerMedia(TestStories.API.Models.RequestModels.PartnerMediaFilterRequest)">
+            <summary>
+            Api to get collection of Partner Medias, 
+            Used At: Admin.
+            </summary>
+            <param name="request"></param>
+            <returns>An object that contains the collection of partner medias.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.PartnerController.GetPartnerMediaAutoComplete(System.Int32,System.String)">
+            <summary>
+            Api to get Partner Media for dropdown, 
+            Used At: Admin.
+            </summary>
+            <param name="partnerId"></param>
+            <param name="filterString"></param>
+            <returns>An object that contains the collection of filtered partner medias.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.SeoController.#ctor(TestStories.API.Services.ISeoRepository)">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.SeoController.AddSeoTagAsync(TestStories.API.Models.RequestModels.SeoTagModel)">
+            <summary>
+            AccessibleBy: Admin Users,
+                          Authenticated Users
+            Description:  Api to add a SeoTag entity.
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the details of newly added SeoTag. </returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.SeoController.GetSeoTagInfoAsync(System.Int64,System.Int32)">
+            <summary>
+            AccessibleBy: Admin Users,
+                          End Users,
+                          Authenticated Users,
+                          Unauthenticated Users
+            Description:  Api to get seoTag entity.
+            </summary>
+            <param name="entityId"></param>
+            <param name="entityTypeId"></param>
+            <returns>An object that contains the details of seoTag.</returns>
+        </member>
+        <member name="T:TestStories.API.Controllers.SeriesController">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.SeriesController.#ctor(TestStories.API.Services.ISeriesWriteService,TestStories.API.Services.ISeriesReadService)">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.SeriesController.GetSeriesViewCollectionAsync(TestStories.API.Models.RequestModels.SeriesViewRequest)">
+            <summary>
+              Api to get collection of filtered Series, 
+              Used At: Admin.
+            </summary>
+            <param name="filter"></param>
+            <returns>An object that contains the collection of filtered Series.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.SeriesController.SeriesAutoCompleteSearch">
+            <summary>
+            Api to get collection of Series for dropdown, 
+            Used At: Admin.
+            </summary>
+            <returns>An object that contains the collection of series short details.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.SeriesController.GetSeriesAsync(System.Int32)">
+            <summary>
+             Api to get Series entity, 
+             Used At: Admin.
+            </summary>
+            <param name="id"></param>
+            <returns>An object that contains the series details</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.SeriesController.GetShortSeriesAsync">
+            <summary>
+             Api to get Series short info, 
+             Used At: Admin.
+            </summary>
+            <returns>An object that contains the collection of series short details.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.SeriesController.AddSeriesAsync(TestStories.API.Models.RequestModels.AddSeriesModel)">
+            <summary>
+             Api to add new Series, 
+             Used At: Admin.
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the details of added Series.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.SeriesController.EditSeriesAsync(TestStories.API.Models.RequestModels.EditSeriesModel)">
+            <summary>
+             Api to edit the Series entity, 
+             Used At: Admin.
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the details of updated Series.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.SeriesController.RemoveSeriesAsync(System.Int32)">
+            <summary>
+            Api to remove the Series entity, 
+            Used At: Admin.
+            </summary>
+            <param name="id"></param>
+            <returns>OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.SeriesController.UpdateCloudSeries">
+            <summary>
+             Api to update All Series on Cloud, 
+             Used At: Admin.
+            </summary>
+            <returns>OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.SeriesController.MigrateDbSeriesToCloud">
+            <summary>
+             Api to migrate all db Series on Cloud, 
+             Used At: Admin.
+            </summary>
+            <returns>OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.SeriesController.DeleteSeriesByNameAsync(System.String)">
+            <summary>
+            Removes Series entity by name. 
+            Used At: Admin.
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="T:TestStories.API.Controllers.SettingsController">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.SettingsController.#ctor(TestStories.API.Services.ISettingWriteService,TestStories.API.Services.Settings.Interfaces.ISettingReadService,TestStories.Common.Models.Events.IPublishBlog)">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.SettingsController.GetFeaturedCarouselAsync">
+            <summary>
+             Api to get featured Carousel setting, 
+             Used At :Admin.
+            </summary>
+            <returns>An object that contains the details of featured carousel setting.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.SettingsController.GetFeaturedTopicsAsync">
+            <summary>
+             Api to get featured Topics setting, 
+             Used At: Admin.
+            </summary>
+            <returns>An object that contains the details of featured topics setting</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.SettingsController.GetFeaturedSeriesAsync">
+            <summary>
+             Api to get featured Series setting, 
+             Used At: Admin.
+            </summary>
+            <returns>An object that contains the details of features Series setting</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.SettingsController.GetFeaturedResourcesAsync">
+            <summary>
+             Api to get featured Resource setting, 
+             Used At: Admin.
+            </summary>
+            <returns>An object that contains the details of features Resource setting</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.SettingsController.SaveFeaturedCarouselAsync(TestStories.API.Models.RequestModels.SaveFeaturedCarouselSettingsModel)">
+            <summary>
+             Api to save featured Carousel setting, 
+             Used At: Admin.
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the details of recently saved featured carousel setting.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.SettingsController.SaveFeaturedTopicsAsync(TestStories.API.Models.RequestModels.SaveFeaturedTopicsSettingsModel)">
+            <summary>
+             Api to save featured Topics setting, 
+             Used At: Admin
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the details of recently saved featured topics setting</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.SettingsController.SaveFeaturedSeriesAsync(TestStories.API.Models.RequestModels.SaveFeaturedSeriesSettingsModel)">
+            <summary>
+             Api to save featured series setting, 
+             Used At: Admin.
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the details of recently saved featured series setting.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.SettingsController.SaveFeaturedResourcesAsync(TestStories.API.Models.RequestModels.SaveFeaturedSeriesSettingsModel)">
+            <summary>
+             Api to save featured Resources setting, 
+             Used At: Admin.
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the details of recently saved featured Resources setting.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.SettingsController.ChangeShowcasedPartnerOrderAsync(TestStories.API.Models.RequestModels.PartnerOrderModel)">
+            <summary>
+             Api to change showcased partner order, 
+             Used At: Admin.
+            </summary>
+            <param name="model"></param>
+            <returns>OK</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.SettingsController.ResetPartnerOrder">
+            <summary>
+             Api to reset showcased partner order, 
+             Used At: Admin.
+            </summary>
+            <param name="model"></param>
+            <returns>OK</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.SettingsController.ResyncBlogs">
+            <summary>
+             Api to Resync Blogs from Wordress, 
+             Used At: Admin.
+            </summary>
+            <param name="model"></param>
+            <returns>OK</returns>
+        </member>
+        <member name="T:TestStories.API.Controllers.StandaloneController">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.StandaloneController.GetSeriesStandaloneEndpoint(TestStories.API.Models.RequestModels.FilterSeriesStandaloneModel)">
+            <summary>
+             Api to get Series entity, 
+             Used At: Admin.
+            </summary>
+            <param name="id"></param>
+            <returns>An object that contains the series details</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.StandaloneController.GetMediaByIdAsync(TestStories.API.Models.RequestModels.FilterMediaStandaloneModel)">
+            <summary>
+            Retrieves Media details by id. 
+            Used At: End-User.
+            </summary>
+            <param name="id"></param>
+            <returns>An object that contains the details of media entity</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.StandaloneController.GetMediaDownload(TestStories.API.Models.RequestModels.GetDownloadMediaStandaloneModel)">
+            <summary>
+             Api to get Media signed url by id, 
+             Used At: Admin.
+            </summary>
+            <param name="id"></param>
+            <returns>An object that contains the series details</returns>
+        </member>
+        <member name="T:TestStories.API.Controllers.ToolsController">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolsController.#ctor(TestStories.API.Services.IToolsWriteService,TestStories.API.Services.IToolsReadService)">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolsController.GetToolViewCollectionAsync(TestStories.API.Models.RequestModels.FilterToolViewRequest)">
+            <summary>
+              Api to get filtered collection of Tools, 
+              Used At: Admin.
+            </summary>
+            <param name="filter"></param>
+            <returns>An object that contains the collection of filtered tools.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolsController.GetClientTools(TestStories.API.Models.RequestModels.FilterClientToolViewRequest)">
+            <summary>
+             Api to get collection of Tools for showMenu, 
+             Used At: End-User.
+            </summary>
+            <param name="filter"></param>
+            <returns>An object that contains the collection of tools which will be show on Menu.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolsController.GetResources(System.Int32,System.Int32)">
+            <summary>
+             Api to get collection of resources, 
+             Used At: End-User.
+            </summary>
+            <param name="filter"></param>
+            <returns>An object that contains the collection of resources.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolsController.DeleteResourceByNameAsync(System.String)">
+            <summary>
+            Removes resource  by name. 
+            Used At: Admin.
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolsController.ToolAutoCompleteSearch(System.Boolean)">
+            <summary>
+            Api to get collection of Tools for dropdown, 
+            Used At: Admin.
+            </summary>
+            <returns>An object that contains the collection of tools.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolsController.AddToolAsync(TestStories.API.Models.RequestModels.AddToolModel)">
+            <summary>
+             Api to add new Tool, 
+             Used At: Admin.
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the details of newly added tool.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolsController.RemoveToolAsync(System.Int32)">
+            <summary>
+             Api to remove the Tool entity, 
+             Used At: Admin.
+            </summary>
+            <param name="id"></param>
+            <returns>OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolsController.GetToolAsync(System.Int32)">
+            <summary>
+             Api to get Tool details, 
+             Used At: Admin and End-User
+            </summary>
+            <param name="id"></param>
+            <returns>An object that contains the details of tool.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolsController.EditToolsAsync(TestStories.API.Models.RequestModels.EditToolModel)">
+            <summary>
+             Api to edit the Tool entity, 
+             Used At: Admin.
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the details of newly updated tool.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolsController.UpdateAllToolOnCloud">
+            <summary>
+             Api to update all Tools at Cloud, 
+             Used At: Admin.
+            </summary>
+            <returns>An object that contains the success response.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolsController.MigrateDbToolsToCloud">
+            <summary>
+            Api to migrate all db Tools to cloud, 
+            Used At: Admin.
+            </summary>
+            <returns>OK response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolsController.ExportResources(TestStories.API.Models.RequestModels.ExportResourceFilter)">
+            <summary>
+              Api to get export filtered Tools/Resources in Excel, 
+              Used At: Admin.
+            </summary>
+            <param name="filter"></param>
+            <returns>null</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolsController.GetFeaturedResourcesAsync">
+            <summary>
+             Api to get featured Resources, 
+             Used At: End-User.
+            </summary>
+            <returns>An object that contains the collection of featured Resources.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolTypeController.#ctor(TestStories.API.Services.IToolTypeReadService,TestStories.API.Services.IToolTypeWriteService)">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolTypeController.GetToolTypesAsync(TestStories.API.Models.RequestModels.FilterToolViewRequest)">
+            <summary>
+             Api to get tooltypes, 
+             Used At: Admin.
+            </summary>
+            <returns>An object that contains the tool types</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolTypeController.ToolTypeAutoCompleteSearch">
+            <summary>
+            Api to get collection of ToolType for dropdown, 
+            Used At: Admin.
+            </summary>
+            <returns>An object that contains the collection of tool types.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolTypeController.GetActiveToolTypesAsync">
+            <summary>
+            Api to get collection of Active ToolType, 
+            Used At: Admin.
+            </summary>
+            <returns>An object that contains the collection of Active tool types.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolTypeController.AddToolTypeAsync(TestStories.API.Models.RequestModels.AddToolType)">
+            <summary>
+             Api to add new Tool Type, 
+             Used At: Admin.
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the details of newly added tool type.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolTypeController.EditToolTypeAsync(System.Int32,TestStories.API.Models.RequestModels.AddToolType)">
+            <summary>
+             Api to add new Tool Type, 
+             Used At: Admin.
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the details of newly added tool type.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolTypeController.RemoveToolTypeAsync(System.Int32)">
+            <summary>
+             Api to remove the Tool Type entity, 
+             Used At: Admin.
+            </summary>
+            <param name="id"></param>
+            <returns>OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolTypeController.EnableToolTypeAsync(System.Int32)">
+            <summary>
+             Api to enable the Tool Type entity, 
+             Used At: Admin.
+            </summary>
+            <param name="id"></param>
+            <returns>OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.ToolTypeController.DeleteToolTypeByNameAsync(System.String)">
+            <summary>
+            Removes ToolType entity by name. 
+            Used At: Admin.
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="T:TestStories.API.Controllers.TopicsController">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.TopicsController.#ctor(TestStories.API.Services.ITopicWriteService,TestStories.API.Services.ITopicReadService)">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.TopicsController.GetTopicViewCollectionAsync(TestStories.API.Models.RequestModels.FilterTopicViewRequest)">
+            <summary>
+             Api to get the collection of filtered Topics, 
+             Used At: Admin and End-User. 
+            </summary>
+            <param name="filter"></param>
+            <returns>An object that contains the collection of filtered topics.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.TopicsController.TopicAutoCompleteSearch">
+            <summary>
+             Api to get collection of Topics for dropdown, 
+             Used At: Admin.
+            </summary>
+            <returns>An object that contains the collection of Topics.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.TopicsController.GetTopicsAsync(System.Nullable{System.Int32})">
+            <summary>
+             Api to get collection of Topics, 
+             Used At: Admin and End-User.
+            </summary>
+            <param name="parentId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.TopicsController.GetTopicAsync(System.Int32)">
+            <summary>
+             Api to get details of Topic entity, 
+             Used At: Admin and End-User.
+            </summary>
+            <param name="id"></param>
+            <returns>An object that contains the details of topic.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.TopicsController.GetShortTopicsAsync">
+            <summary>
+             Api to get collection of Topic short info, 
+             Used At: Admin and End-User.
+            </summary>
+            <returns>An object that contains the collection of topics short info.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.TopicsController.AddTopicAsync(TestStories.API.Models.RequestModels.AddTopicModel)">
+            <summary>
+             Api to add a Topic entity, 
+             Used At: Admin.
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the details of newly added topic. </returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.TopicsController.EditTopicAsync(TestStories.API.Models.RequestModels.EditTopicModel)">
+            <summary>
+             Api to edit the Topic entity, 
+             Used At: Admin.
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the details of updated topic</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.TopicsController.RemoveTopicAsync(System.Int32)">
+            <summary>
+             Api to remove the Topic entity, 
+             Used At: Admin.
+            </summary>
+            <param name="id"></param>
+            <returns>OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.TopicsController.UpdateCloudTopics">
+            <summary>
+             Api to update all Topics on Cloud, 
+             Used At: Admin.
+            </summary>
+            <returns>OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.TopicsController.MigrateDbTopicsToCloud">
+            <summary>
+            Api to migrate all db Topics on Cloud,
+            Used At: Admin.
+            </summary>
+            <returns>OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.TopicsController.DeleteTopicByNameAsync(System.String)">
+            <summary>
+            Removes Topic entity by name. 
+            Used At: Admin.
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="T:TestStories.API.Controllers.UserHomepageController">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.UserHomepageController.#ctor(TestStories.API.Services.IHomePageReadService)">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.UserHomepageController.GetAllEndpointsAsync">
+            <summary>
+             Api to get featured Videos, Blogs, Resources, Topics and Series 
+             Used At: End-User.
+            </summary>
+            <returns>An object that contains the collection of featured medias.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserHomepageController.GetFeaturedVideosAsync">
+            <summary>
+             Api to get featured Videos, 
+             Used At: End-User.
+            </summary>
+            <returns>An object that contains the collectin of featured medias.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserHomepageController.GetFeaturedSeriesAsync">
+            <summary>
+             Api to get featured Series, 
+             Used At: End-User.
+            </summary>
+            <returns>An object that contains the collectin of featured series.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserHomepageController.GetFeaturedTopicsAsync">
+            <summary>
+             Api to get featured Topics, 
+             Used At: End-User.
+            </summary>
+            <returns>An object that contains the collectin of featured topics.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserHomepageController.GetFeaturedResourcesAsync">
+            <summary>
+             Api to get featured Resources, 
+             Used At: End-User.
+            </summary>
+            <returns>An object that contains the collection of featured Resources.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserHomepageController.GetEditorPicksAsync">
+            <summary>
+             Api to get Editor Picks, 
+             Used At: End-User.
+            </summary>
+            <returns>An object that contains the collectin of editor picks.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserHomepageController.GetUserFacingCloudSearchAsync(System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+             Api to get user facing cloud search, 
+             Used At: End-User.
+            </summary>
+            <param name="filterString"></param>
+            <param name="pageSize"></param>
+            <param name="pageNumber"></param>
+            <param name="isIncludeEmbedded"></param>
+            <returns>An object that contains the searh result from the cloud</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserHomepageController.SeriesMediaDetailsAsync(System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Api to get Series Medias details, 
+            Used At: End-User.
+            </summary>
+            <param name="seriesId"></param>
+            <param name="pageNumber"></param>
+            <param name="pageSize"></param>
+            <param name="isIncludeEmbedded"></param>
+            <returns>An object that contains the details of medias attached to particular series</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserHomepageController.TopicMediaDetailsAsync(System.Int32,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Api to get Topic Medias details, 
+            Used At: End-User.
+            </summary>
+            <param name="topicId"></param>
+            <param name="pageNumber"></param>
+            <param name="pageSize"></param>
+            <param name="isIncludeEmbedded"></param>
+            <returns>An object that contains the details of  media attached to particular topic</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserHomepageController.UpcomingMediasAsync(System.Int64,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Api to get upcoming Medias, 
+            Used At: End-User.
+            </summary>
+            <param name="mediaId"></param>
+            <param name="pageNumber"></param>
+            <param name="pageSize"></param>
+            <param name="itemType"></param>
+            <returns>An object that contains the collection of medias that will be populated at See-What-Next section.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserHomepageController.FilteredResourcesAsync(TestStories.API.Models.RequestModels.FilterRequestModel)">
+            <summary>
+             Api to get filtered resources from cloud, 
+             Used At: End-User.
+            </summary>
+            <returns>An object that contains the searh result from the cloud</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserHomepageController.FilteredSeriesAsync(TestStories.API.Models.RequestModels.SeriesFilterRequest)">
+            <summary>
+             Api to get filtered series. 
+             Used At: End-User.
+            </summary>
+            <returns>An object that contains the filtered series</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserHomepageController.ResourcesStatisticsAsync">
+            <summary>
+             Api to get all resources with details from cloud, 
+             Used At: End-User.
+            </summary>
+            <returns>An object that contains the searh result from the cloud</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:TestStories.API.Controllers.UserHomepageController.GetToolsByTopicIdAsync(System.Int32,System.Int32,System.Int32)" -->
+        <member name="M:TestStories.API.Controllers.UserHomepageController.GetFeaturedBlogsAsync">
+            <summary>
+             Api to get featured Blogs, 
+             Used At: End-User.
+            </summary>
+            <returns>An object that contains the collection of featured Blogs.</returns>
+        </member>
+        <member name="T:TestStories.API.Controllers.UserMediaController">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.UserMediaController.#ctor(TestStories.API.Services.IUserMediaReadService,TestStories.API.Services.IUserReadService,TestStories.API.Services.IUserMediaWriteService,Microsoft.Extensions.Logging.ILogger{TestStories.API.Controllers.UserMediaController})">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.UserMediaController.AddPlaylistAsync(TestStories.API.Models.RequestModels.AddPlaylistModel)">
+            <summary>
+             Api to add User's playlist,  
+             Used At: End-User.
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the details of newly added user's playlist </returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserMediaController.AddToFavouriteAsync(TestStories.API.Models.RequestModels.AddToFavoriteModel)">
+            <summary>
+            Api to add Media to User's favorite,  
+            Used At: End-User.
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the details of newly added media to user's favourite.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserMediaController.RemoveFromFavouriteAsync(TestStories.API.Models.RequestModels.AddToFavoriteModel)">
+            <summary>
+            Api to remove Media from User's favorite,  
+            Used At: End-User.
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the details of recenlty deteted media from user's favourite.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserMediaController.AddToPlaylistAsync(TestStories.API.Models.RequestModels.AddToPlaylistModel)">
+            <summary>
+            Api to add Media to playlist,  
+            Used At: End-User.
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the details of recently added media to playlist.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserMediaController.EditPlaylistAsync(System.Int32,TestStories.API.Models.RequestModels.EditPlayListModel)">
+            <summary>
+            Api to edit User's playlist,  
+            Used At: End-User.
+            </summary>
+            <param name="playlistId"></param>
+            <param name="model"></param>
+            <returns>An object that contains the details of user's recently updated playlist.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserMediaController.MediaPlayListAsync(System.Int32)">
+            <summary>
+             Api to get Media playlist details, 
+             Used At: End-User.
+            </summary>
+            <param name="playlistId"></param>
+            <returns>An object that contains the details of medias attached to particular playlist.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserMediaController.RemovePlaylistAsync(System.Int32)">
+            <summary>
+            Api to remove User's playlist,  
+            Used At: End-User
+            </summary>
+            <param name="playlistId"></param>
+            <returns>OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserMediaController.MediaDetailAsync(System.Int32)">
+            <summary>
+             Api to get Media details, 
+             Used At: Admin and End-User.
+            </summary>
+            <param name="mediaId"></param>
+            <returns>An object that contains the details of media.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserMediaController.SubscribeSeriesAsync(TestStories.API.Models.RequestModels.SubscribeSeries)">
+            <summary>
+            Api to subscribe series at user's subscription, 
+            Used At: End-User
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contains the details of subscribed series at user's subscription</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserMediaController.UnsubscribeSeriesAsync(TestStories.API.Models.RequestModels.SubscribeSeries)">
+            <summary>
+              Api to unsubscribe series from the user's subscription, 
+              Used At: End-User
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contais the details of unsubscribed series from user's subscription</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserMediaController.SubscribeTopicAsync(TestStories.API.Models.RequestModels.SubscribeTopic)">
+            <summary>
+             Api to subscribe topic to user's subscription, 
+             Used At: End-User
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contais the details of subscribed topic at user's subscription</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserMediaController.UnsubscribeTopicAsync(TestStories.API.Models.RequestModels.SubscribeTopic)">
+            <summary>
+             Api to unsubscribe topic from user's subscription, 
+             Use At: End-User
+            </summary>
+            <param name="model"></param>
+            <returns>An object that contais the details of unsubscribed topic from user's subscription</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserMediaController.WatchHistoryAsync(System.Int32)">
+            <summary>
+             Api to get user's watch history, 
+             Used At: End-User
+            </summary>
+            <param name="userId"></param>
+            <returns>An object that contains the colllection of user's watch history details</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserMediaController.AddWatchHistoryAsync(System.Int64)">
+            <summary>
+             Api to add media to user's watch history, 
+             Used At: End-User
+            </summary>
+            <param name="mediaId"></param>
+            <returns>An object that contains the details of  recently added media at user's watch history</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UserMediaController.RemoveWatchHistoryAsync(System.Int64)">
+            <summary>
+            Api to remove media from user's watch history, 
+            Used At: End-User
+            </summary>
+            <param name="mediaId"></param>
+            <returns>An object that contains the details of recently removed media from the user's watch history.</returns>
+        </member>
+        <member name="T:TestStories.API.Controllers.UsersController">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.UsersController.#ctor(TestStories.API.Services.IUserWriteService,TestStories.API.Services.IUserReadService,Microsoft.Extensions.Options.IOptions{TestStories.Common.Configurations.AppSettings},Microsoft.Extensions.Logging.ILogger{TestStories.API.Controllers.UsersController})">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.UsersController.GetShortUsersAsync(TestStories.API.Models.RequestModels.FilterUserRequest)">
+            <summary>
+            Api to get collection of filtered users, 
+            Used At: Admin and End-User
+            </summary>
+            <param name="filter"></param>
+            <returns>An object that conatains the collection of flitered users</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UsersController.AddUserAsync(TestStories.API.Models.RequestModels.AddUserModel)">
+            <summary>
+            Api to add a new user, 
+            Used At: Admin
+            </summary>
+            <param name="entity"></param>
+            <returns>An object that contains the details of newly added user</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UsersController.UserAutoCompleteSearch">
+            <summary>
+            Api to get the collection of users for dropdown, 
+            Used At: Admin
+            </summary>
+            <returns>An object that contains the collection of users</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UsersController.EditUserAsync(TestStories.API.Models.RequestModels.EditUserModel)">
+            <summary>
+            Api to update user, 
+            Used At: Admin and End-User
+            </summary>
+            <param name="entity"></param>
+            <returns>An object that contains the details of recently updated user</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UsersController.ChangeUserStatus(TestStories.API.Models.RequestModels.ChangeUserStatusModel)">
+            <summary>
+            Api to update user status, 
+            Used At; Admin
+            </summary>
+            <param name="model"></param>
+            <returns>OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UsersController.Get(System.Int32)">
+            <summary>
+            Api to get short user info, 
+            Used At: Admin and End-User
+            </summary>
+            <param name="id"></param>
+            <returns>An object that contains the details of user</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UsersController.Playlists(System.Int32)">
+            <summary>
+            Api to get user's playlist, 
+            Used At: End-user
+            </summary>
+            <param name="userId"></param>
+            <returns>An object that contains the user's paylists details</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UsersController.GetUserSubscriptions(System.Int32)">
+            <summary>
+            Api to get user's subscriptions, 
+            Used At: End-User
+            </summary>
+            <param name="userId"></param>
+            <returns>An object that contains the details of user's subscriptions.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UsersController.Favorites(System.Int32)">
+            <summary>
+            Api to get user's favorites, 
+            Used At: End-User
+            </summary>
+            <param name="userId"></param>
+            <returns>An object that contains the details of user's favourites</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:TestStories.API.Controllers.UsersController.RemoveUserAsync(System.String,System.Boolean)" -->
+        <member name="M:TestStories.API.Controllers.UsersController.ImportUsersAtFusionAuth">
+            <summary>
+             Api to import db users at FusionAuth Server
+            </summary>
+        </member>
+        <member name="M:TestStories.API.Controllers.UsersController.GetAllUserSubscriptions">
+            <summary>
+             Api to get user's playlists, subscriptions, favorites and watch history 
+             Used At: End-User.
+            </summary>
+            <returns>An object that contains the user specific data</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UsersController.RegisterActiveUser(TestStories.API.Models.RequestModels.RegisterActiveUser)">
+            <summary>
+            Api to register Active(ready for login) User at application as well as FusionAuth, 
+            </summary>
+            <param name="entity"></param>
+            <returns>OK Response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.UsersController.GetUserByEmail(System.String)">
+            <summary>
+            Api to get user info by email from db as well as fusion auth
+            </summary>
+            <param name="email"></param>
+            <returns>An object that contains the details of user</returns>
+        </member>
+        <member name="T:TestStories.API.Controllers.UserTypesController">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.UserTypesController.#ctor(TestStories.API.Services.IUserTypesService,Microsoft.Extensions.Logging.ILogger{TestStories.API.Controllers.UserTypesController})">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.UserTypesController.GetUserTypesAsync">
+            <summary>
+            Api to get user types master data, 
+            Used At: Admin
+            </summary>
+            <returns>An object that contains the collection of user types.</returns>
+        </member>
+        <member name="T:TestStories.API.Controllers.VideoPipelineController">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Controllers.VideoPipelineController.#ctor(TestStories.API.Services.IVideoPipelineService,TestStories.API.Services.IS3BucketService)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="videoPipelineService"></param>
+        </member>
+        <member name="M:TestStories.API.Controllers.VideoPipelineController.UploadWithSignedUrl(TestStories.API.Models.RequestModels.VideoPipelineSignedUrlRequest)">
+            <summary>
+                Customer request S3 presigned URL for Video upload. Formats supported
+            </summary>
+            <param name="source">
+                The GetPreSignedUrlRequest that defines the
+                parameters of the operation.
+            </param>
+            <returns>An object that is the signed http request.</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.VideoPipelineController.RetrieveWithSignedUrl(System.String)">
+            <summary>
+                Video Pipeline. Get record by id and presing url
+            </summary>
+            <param name="uuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.VideoPipelineController.VideoUploaded(TestStories.API.Models.RequestModels.VideoPipelineEvent)">
+            <summary>
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.VideoPipelineController.TranscodeError(TestStories.API.Models.RequestModels.VideoPipelineEventError)">
+            <summary>
+                Video Pipeline errored when transcoded
+            </summary>
+            <param name="source"></param>
+            <returns>Ok response</returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.VideoPipelineController.TranscodeSuccess(TestStories.API.Models.RequestModels.VideoPipelineEventSuccess)">
+            <summary>
+                Video Pipeline  Event successfully transcoded
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TestStories.API.Controllers.VideoPipelineController.GetThumbnailUrl(System.String)">
+            <summary>
+            Get Thumbnail url from Uuid
+            </summary>
+            <param name="imageUuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TestStories.API.Filters.CustomAuthorizationFilter.#ctor(TestStories.DataAccess.Entities.TestStoriesContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:TestStories.API.Infrastructure.Filters.DefaultValueSchemaFilter">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Infrastructure.Filters.DefaultValueSchemaFilter.Apply(Microsoft.OpenApi.Models.OpenApiSchema,Swashbuckle.AspNetCore.SwaggerGen.SchemaFilterContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:TestStories.API.Infrastructure.Filters.FormFileSwaggerFilter">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Infrastructure.Filters.FormFileSwaggerFilter.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:TestStories.API.Infrastructure.Filters.NullableTypeSchemaFilter">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Infrastructure.Filters.NullableTypeSchemaFilter.Apply(Microsoft.OpenApi.Models.OpenApiSchema,Swashbuckle.AspNetCore.SwaggerGen.SchemaFilterContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:TestStories.API.Infrastructure.Errors.BusinessValidationError">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Infrastructure.Errors.BusinessValidationError.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Infrastructure.Errors.BusinessValidationError.#ctor(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:TestStories.API.Infrastructure.S3Settings">
+            <summary>
+            Should not be used. Or at least a name we should change.
+            </summary>
+        </member>
+        <member name="P:TestStories.API.Infrastructure.S3Settings.S3MediaBucketName">
+            <summary>
+            S3 bucket name
+            </summary>
+        </member>
+        <member name="P:TestStories.API.Infrastructure.S3Settings.S3MediaQueueLinkExpirationInMinutes">
+            <summary>
+            Presigned URL expiration time
+            </summary>
+        </member>
+        <member name="P:TestStories.API.Infrastructure.S3Settings.ConcurrentServiceRequests">
+            <summary>
+            ConcurrentServiceRequests
+            </summary>
+        </member>
+        <member name="P:TestStories.API.Infrastructure.S3Settings.MinSizeBeforePartUpload">
+            <summary>
+            MinSizeBeforePartUpload
+            </summary>
+        </member>
+        <member name="P:TestStories.API.Infrastructure.S3Settings.PartSize">
+            <summary>
+            PartSize
+            </summary>
+        </member>
+        <member name="T:TestStories.API.Models.RequestModels.AddTopicModel">
+            <summary>
+            Add Topic Model
+            </summary>
+        </member>
+        <member name="P:TestStories.API.Models.RequestModels.FilterMediaStandaloneModel.MediaTypes">
+            <summary>
+            Possible values: Video, PodcastAudio, EmbeddedMedia, Banner
+            </summary>
+        </member>
+        <member name="T:TestStories.API.Models.RequestModels.FilterRequest">
+            <summary>
+            Filter Request
+            </summary>
+        </member>
+        <member name="T:TestStories.API.Models.RequestModels.FilterShortUsersRequest">
+            <inheritdoc />
+        </member>
+        <member name="T:TestStories.API.Models.RequestModels.SeriesViewRequest">
+            <inheritdoc />
+        </member>
+        <member name="T:TestStories.API.Models.RequestModels.VideoPipelineEvent">
+            <summary>
+            Signed Url Request Object
+            </summary>
+        </member>
+        <member name="P:TestStories.API.Models.RequestModels.VideoPipelineEvent.Uuid">
+            <summary>
+            Video file Id
+            UUID format
+            </summary>
+        </member>
+        <member name="T:TestStories.API.Models.RequestModels.VideoPipelineEventError">
+            <summary>
+            Signed Url Request Object
+            </summary>
+        </member>
+        <member name="P:TestStories.API.Models.RequestModels.VideoPipelineEventError.Uuid">
+            <summary>
+            Video file Id
+            UUID format
+            </summary>
+        </member>
+        <member name="P:TestStories.API.Models.RequestModels.VideoPipelineEventError.Message">
+            <summary>
+            Error message e.g.
+            why video is not transcoded
+            </summary>
+        </member>
+        <member name="T:TestStories.API.Models.RequestModels.VideoPipelineEventSuccess">
+            <summary>
+            Signed Url Request Object
+            </summary>
+        </member>
+        <member name="P:TestStories.API.Models.RequestModels.VideoPipelineEventSuccess.Uuid">
+            <summary>
+            Video file Id
+            UUID format
+            </summary>
+        </member>
+        <member name="T:TestStories.API.Models.RequestModels.VideoPipelineSignedUrlRequest">
+            <summary>
+            Signed Url Request Object
+            </summary>
+        </member>
+        <member name="P:TestStories.API.Models.RequestModels.VideoPipelineSignedUrlRequest.FileType">
+            <summary>
+            Video file type
+            Current format supported by Video Pipeline are:
+            "mov", "mp4", "m4v", "webm", "ogv", "mpg", "mpeg"
+            </summary>
+        </member>
+        <member name="P:TestStories.API.Models.RequestModels.VideoPipelineSignedUrlRequest.FileName">
+            <summary>
+            Video FileName
+            </summary>
+        </member>
+        <member name="P:TestStories.API.Models.RequestModels.VideoPipelineSignedUrlRequest.FileSize">
+            <summary>
+            Video File Size
+            </summary>
+        </member>
+        <member name="P:TestStories.API.Models.RequestModels.VideoPipelineSignedUrlRequest.FileDescription">
+            <summary>
+            Video File Description
+            </summary>
+        </member>
+        <member name="P:TestStories.API.Models.ResponseModels.SignedUrlModel.Url">
+            <summary>
+            Pre-Signed URI
+            </summary>
+        </member>
+        <member name="P:TestStories.API.Models.ResponseModels.SignedUrlModel.Uuid">
+            <summary>
+            Uuid
+            </summary>
+        </member>
+        <member name="P:TestStories.API.Models.ResponseModels.SignedUrlModel.ThumbnailUuid">
+            <summary>
+            Thumbnail Uuid
+            </summary>
+        </member>
+        <member name="P:TestStories.API.Models.ResponseModels.SignedUrlModel.HttpVerb">
+            <summary>
+            Http Verb that is supported by this service
+            </summary>
+        </member>
+        <member name="T:TestStories.API.Models.VideoMetadata">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:TestStories.API.Models.VideoMetadata.Uuid">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:TestStories.API.Models.VideoMetadata.Ttl">
+            <summary>
+            Time to leave. e.g. Expiration time
+            </summary>
+        </member>
+        <member name="P:TestStories.API.Models.VideoMetadata.Meta">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:TestStories.API.Models.VideoMetadata.Status">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:TestStories.API.Models.VideoMetadata.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:TestStories.API.Models.Metadata">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:TestStories.API.Models.Metadata.FileName">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:TestStories.API.Models.Metadata.FileType">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:TestStories.API.Models.Metadata.FileSize">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:TestStories.API.Models.Metadata.FileDescription">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:TestStories.API.Models.Metadata.FilePathOriginal">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:TestStories.API.Models.Metadata.FilePathTranscoded">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:TestStories.API.Models.Metadata.FilePathThumbnail">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:TestStories.API.Models.Metadata.UserId">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:TestStories.API.Models.Metadata.BucketOriginal">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:TestStories.API.Models.Metadata.BucketTranscoded">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:TestStories.API.Models.Metadata.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Services.Errors.ApiError.#ctor(System.Int32,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Services.Errors.ApiError.#ctor(System.Int32,System.String,System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:TestStories.API.Services.DynamoDBService">
+            <summary>
+            Wrapper class that consumed by Video Pipeline
+            </summary>
+        </member>
+        <member name="M:TestStories.API.Services.DynamoDBService.#cctor">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Services.DynamoDBService.Save(TestStories.API.Models.VideoMetadata)">
+            <summary>
+            Update Video Record
+            </summary>
+            <param name="metadata"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:TestStories.API.Services.DynamoDBService.FindById(System.String)">
+            <summary>
+            Find Video Record by uuid
+            </summary>
+            <param name="uuid"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:TestStories.API.Services.DynamoDBService.GetBlogs">
+            <summary>
+            Find Blogs from DynamoDB
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:TestStories.API.Services.MediaReadService.IsMediaActive(System.Int64)">
+            <summary>
+            Check media status
+            </summary>
+            <param name="mediaId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TestStories.API.Services.PartnerReadService.#ctor(TestStories.DataAccess.Entities.TestStoriesContext,TestStories.API.Services.IS3BucketService)">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Services.SeriesReadService.#ctor(TestStories.DataAccess.Entities.TestStoriesContext,TestStories.API.Services.IS3BucketService)">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Services.UserReadService.IsMediaActive(System.Int64)">
+            <summary>
+            Check media status
+            </summary>
+            <param name="mediaId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TestStories.API.Services.Validators.AddBannerModelValidator">
+            <inheritdoc />
+        </member>
+        <member name="T:TestStories.API.Services.Validators.AddEmbedMediaModelValidator">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Services.Validators.AddEmbedMediaModelValidator.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="T:TestStories.API.Services.Validators.AddTopicModelValidator">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Services.Validators.AddTopicModelValidator.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="T:TestStories.API.Services.Validators.AddUserModelValidator">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Services.Validators.AddUserModelValidator.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="T:TestStories.API.Services.Validators.SaveFeaturedCarouselSettingsModelValidator">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Services.Validators.SaveFeaturedCarouselSettingsModelValidator.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="T:TestStories.API.Services.Validators.SaveFeaturedTopicsSettingsModelValidator">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Services.Validators.SaveFeaturedTopicsSettingsModelValidator.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Concrete.EFAccountRepository.#ctor(TestStories.DataAccess.Entities.TestStoriesContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Concrete.EditorPickWriteService.#ctor(TestStories.DataAccess.Entities.TestStoriesContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Concrete.ExperimentWriteService.#ctor(TestStories.DataAccess.Entities.TestStoriesContext,TestStories.API.Services.IS3BucketService)">
+            <inheritdoc />
+        </member>
+        <member name="T:TestStories.API.Concrete.PartnerWriteService">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Concrete.PartnerWriteService.#ctor(TestStories.DataAccess.Entities.TestStoriesContext,TestStories.API.Services.IS3BucketService,TestStories.CloudSearch.Service.Interface.ICloudMediaSearchProvider,TestStories.CloudSearch.Service.Interface.ICloudTopicToolSeriesProvider)">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Concrete.PartnerWriteService.RemovePartnerAsync(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Concrete.SeriesWriteService.#ctor(TestStories.DataAccess.Entities.TestStoriesContext,TestStories.CloudSearch.Service.Interface.ICloudTopicToolSeriesProvider,TestStories.CloudSearch.Service.Interface.ICloudMediaSearchProvider,TestStories.API.Services.IS3BucketService)">
+            <inheritdoc />
+        </member>
+        <member name="T:TestStories.API.Concrete.SettingWriteService">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Concrete.SettingWriteService.#ctor(TestStories.DataAccess.Entities.TestStoriesContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:TestStories.API.Concrete.TopicWriteService">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Concrete.TopicWriteService.#ctor(TestStories.DataAccess.Entities.TestStoriesContext,TestStories.API.Services.IS3BucketService,TestStories.CloudSearch.Service.Interface.ICloudTopicToolSeriesProvider)">
+            <inheritdoc />
+        </member>
+        <member name="T:TestStories.API.Concrete.UserWriteService">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.Concrete.UserWriteService.#ctor(TestStories.DataAccess.Entities.TestStoriesContext,Microsoft.Extensions.Options.IOptions{TestStories.Common.Configurations.AppSettings},Microsoft.Extensions.Logging.ILogger{TestStories.API.Concrete.UserWriteService},Microsoft.Extensions.Options.IOptions{TestStories.Common.Configurations.EmailSettings},TestStories.Common.Events.IPublishEvent{TestStories.Common.MailKit.SendEmail})">
+            <inheritdoc />
+        </member>
+        <member name="T:TestStories.API.Common.Authentication.AuthenticationModule">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TestStories.API.Common.Authentication.AuthenticationModule.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TestStories.API.Common.Authentication.AuthenticationModule.GenerateUserClaimFromJwt(System.String)">
+            Using the same key used for signing token, user payload is generated back
+        </member>
+        <member name="M:TestStories.API.Common.Authentication.AuthenticationModule.PopulateUserIdentity(System.IdentityModel.Tokens.Jwt.JwtSecurityToken)">
+            <summary>
+            
+            </summary>
+            <param name="userPayloadToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TestStories.API.S3Services.S3FileSystem">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:TestStories.API.S3Services.S3FileSystem.#ctor(TestStories.API.S3Services.S3TransferParameters,System.Boolean,System.Int32,TestStories.API.Infrastructure.S3Settings)">
+             <summary> The class constructor. </summary>
+            
+        </member>
+        <member name="M:TestStories.API.S3Services.S3FileSystem.#ctor(TestStories.API.Infrastructure.S3Settings)">
+            <inheritdoc />
+        </member>
+        <member name="M:TestStories.API.S3Services.S3FileSystem.UploadFile(System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+             <summary>
+             Upload file from local system to AWS S3 bucket</summary>
+             <param name="fromPath"> Full path to a local file</param>
+             <param name="bucketName"> AWS S3 bucket name</param>
+             <param name="mediaFolder"> Folder associated with different type of media (V01,V02,P01,..)</param>
+             <param name="fileFolder"> Application generated folder structure (different in ZAP and FC)</param>
+             <param name="fileName"> File to upload</param>
+             <param name="isMutiPart"> Defines if upload should try to use multi-part transfer</param>
+            
+        </member>
+        <member name="M:TestStories.API.S3Services.S3FileSystem.UploadFileToS3(System.String,System.Int32)">
+            <summary>
+            TODO: Why there is a need to generate presigned URL and make an upload after in same method?
+            </summary>
+            <param name="filePath"></param>
+            <param name="sessionId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TestStories.API.S3Services.S3TransferParameters">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:TestStories.API.S3Services.S3TransferParameters.ConcurrentServiceRequests">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:TestStories.API.S3Services.S3TransferParameters.MinSizeBeforePartUpload">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:TestStories.API.S3Services.S3TransferParameters.PartSize">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:TestStories.API.S3Services.S3TransferParameters.MaximumNumberOfRetries">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:TestStories.API.S3Services.S3TransferParameters.TimeBetweenRetriesMs">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:TestStories.API.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+                This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:TestStories.API.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+                Configuration Method
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
